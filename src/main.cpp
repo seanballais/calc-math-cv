@@ -8,7 +8,7 @@ int main()
 {
     // Init
     cv::VideoCapture captureDevice(0);
-    if (!cap.isOpened()) { // Check if we turned the camera on
+    if (!captureDevice.isOpened()) { // Check if we turned the camera on
         return -1;
     }
 
@@ -16,7 +16,7 @@ int main()
 
     // Display the frames
     while (true) {
-        cap >> frame;
+        captureDevice >> frame;
         cv::imshow("calc-math-cv", frame);
 
         if (cv::waitKey(30) >= 0) {
