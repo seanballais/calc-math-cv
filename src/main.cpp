@@ -19,8 +19,8 @@ int main()
         captureDevice >> frame;
         cv::imshow("calc-math-cv", frame);
 
-        if (cv::waitKey(30) >= 0) {
-            break;
+        if ((int) cv::waitKey(10) == 'q') {
+            return 0;
         }
     }
 
